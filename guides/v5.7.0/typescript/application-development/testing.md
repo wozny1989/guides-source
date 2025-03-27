@@ -156,7 +156,7 @@ module('Integration | Component | Profile', function (hooks) {
       displayName: 'Rey',
     };
 
-    await render(hbs`<Profile @user={{this.user}}`);
+    await render(hbs`<Profile @user={{this.user}} />`);
 
     assert.dom('[data-test-name]').hasText(this.user.displayName);
     assert
